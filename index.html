@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grandpa Glitch: Part 1 💖</title>
+    <style>
+        /* This hides all the extra signs of Canva and scrollbars */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%;
+            overflow: hidden; 
+            background-color: #000; /* Black background for a cinematic feel */
+        }
+
+        /* This container "clips" the Canva bars */
+        .canva-clipper {
+            position: absolute;
+            top: -55px; /* Hides the top Canva bar */
+            left: 0;
+            width: 100%;
+            height: calc(100% + 110px); /* Stretches to hide the bottom bar */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Hidden Background Music */
+        #bg-music {
+            display: none;
+        }
+
+        /* Hint for the user to start music */
+        .start-hint {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: sans-serif;
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 15px;
+            z-index: 9999;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="start-hint" id="hint" onclick="startExperience()">
+        <p>Tap to enter our story... ✨</p>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="PASTE_YO" type="audio/mpeg">
+    </audio>
+
+    <div class="canva-clipper">
+        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2225%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAHD0QU1MGw/3aFxgtI0bya9hZuWkDOp-A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHD0QU1MGw&#x2F;3aFxgtI0bya9hZuWkDOp-A&#x2F;view?utm_content=DAHD0QU1MGw&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Love</a> by Min Yoongi
+    </div>
+
+    <script>
+        function startExperience() {
+            // Plays the music
+            var audio = document.getElementById("bg-music");
+            audio.play();
+            
+            // Hides the hint box
+            document.getElementById("hint").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
